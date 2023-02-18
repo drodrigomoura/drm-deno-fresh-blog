@@ -2,6 +2,7 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { CSS } from "$gfm/mod.ts";
 
 import { loadPost } from "../../utils/posts.ts";
+import Button from "../../islands/Button.tsx";
 
 export const handler: Handlers = {
   async GET(req, ctx) {
@@ -24,6 +25,7 @@ export default function PagePost(props: PageProps) {
         class="markdown-body"
         dangerouslySetInnerHTML={{ __html: data?.body }}
       />
+      <Button />
     </article>
   );
 }
