@@ -2,6 +2,7 @@ import { Head } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { listPosts } from "../utils/posts.ts";
 import { Post } from "../types.d.ts";
+import { logo } from "../utils/assets.ts";
 
 export const handler: Handlers = {
   async GET(req, ctx) {
@@ -17,7 +18,12 @@ export default function Home(props: PageProps) {
 
   return (
     <main class="p-4">
-      <h1 className="text-2xl">Mi blog drodrigomoura</h1>
+      <div class="flex items-center">
+        <img src={logo} alt="logo" />
+        <h1 className="text-2xl">
+          Mi blog drodrigomoura
+        </h1>
+      </div>
 
       {posts.map((post: Post) => (
         <article>
