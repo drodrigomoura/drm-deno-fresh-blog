@@ -17,7 +17,7 @@ export default function Home(props: PageProps) {
 
   return (
     <main class="p-4">
-      <h1 className="text-2xl">Mi blog</h1>
+      <h1 className="text-2xl">Mi blog drodrigomoura</h1>
 
       {posts.map((post: Post) => (
         <article>
